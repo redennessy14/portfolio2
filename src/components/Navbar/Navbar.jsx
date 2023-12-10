@@ -1,7 +1,9 @@
 import React from "react";
 import "./Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const handleHover = () => {
     const nav = document.querySelector(".nav");
     nav.classList.add("fill-background");
@@ -13,37 +15,32 @@ const Navbar = () => {
   };
 
   return (
-    <div className="nav">
-      {/* <div
+    <nav className="nav">
+      <Link
         className="block"
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
-      >
-        HOME
-      </div> */}
-
-      <div
-        className="block"
-        onMouseEnter={handleHover}
-        onMouseLeave={handleMouseLeave}
+        to="/projects"
       >
         PROJECTS
-      </div>
-      <div
+      </Link>
+      <Link
         className="block"
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
+        to="/about"
       >
         ABOUT ME
-      </div>
-      <div
+      </Link>
+      <Link
         className="block"
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
+        to="/contact"
       >
         CONTACT
-      </div>
-    </div>
+      </Link>
+    </nav>
   );
 };
 

@@ -1,18 +1,16 @@
-import { Canvas } from "@react-three/fiber";
 import "./App.css";
-import AnimatedModel from "./components/AnimatedModel/AnimatedModel";
-import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import NameBlock from "./components/NameBlock/NameBlock";
+
+import { BrowserRouter } from "react-router-dom";
+import Routing from "./Routing";
 
 function App() {
   return (
-    <div className="app-container">
-      <NameBlock />
-      <Navbar />
-      <AnimatedModel />
+    <BrowserRouter>
+      <Routing />
+
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

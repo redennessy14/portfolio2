@@ -4,7 +4,6 @@
   color: white;
   font-size: 35px;
   padding: 15px;
-
   transition: background-color 0.5s ease-in-out;
   position: fixed;
   top: 45%;
@@ -17,4 +16,8 @@
 }
 .block {
   cursor: pointer;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
 }

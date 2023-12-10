@@ -6,4 +6,6 @@
   font-size: 25px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: "Clash Display", sans-serif;
+  font-weight: 300;
 }

@@ -35,13 +35,29 @@ const Model = () => {
     }
   });
 
+  if (!scene) {
+    return (
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          color: "white",
+        }}
+      >
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <group ref={group}>
       {scene && (
         <primitive
           position={[0, 0, 0]}
           object={scene}
-          scale={[1, 1, 1]}
+          scale={[1.5, 1.5, 1.5]}
           rotation={[5, 0, 5]}
         />
       )}
