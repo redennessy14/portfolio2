@@ -7,7 +7,6 @@ import NameBlock from "../../components/NameBlock/NameBlock";
 const HomePage = () => {
   return (
     <div className="homepage">
-      <NameBlock />
       <Navbar />
       <AnimatedModel />
     </div>

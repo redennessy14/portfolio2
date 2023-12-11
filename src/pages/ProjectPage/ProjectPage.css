@@ -1,5 +1,31 @@
 .project {
-  background-color: red;
-  width: 100vw;
-  height: 100vh;
+  margin-top: 150px;
+  color: white;
+}
+.project h2 {
+  font-family: "Manuscribe Free", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  width: 85%;
+  text-align: right;
+}
+.project__block {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+.project__block_img {
+  width: 40%;
+}
+.project__block_name {
+  font-family: "Manuscribe Free", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+}
+.project__block_desc {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
 }

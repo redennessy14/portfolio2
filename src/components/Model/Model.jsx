@@ -35,22 +35,6 @@ const Model = () => {
     }
   });
 
-  if (!scene) {
-    return (
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          color: "white",
-        }}
-      >
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
-
   return (
     <group ref={group}>
       {scene && (

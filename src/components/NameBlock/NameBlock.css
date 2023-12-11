@@ -8,5 +8,5 @@
   transform: translateX(-50%);
   font-family: "Manuscribe Free", sans-serif;
   font-weight: 800;
-  background-color: black;
+  cursor: pointer;
 }
