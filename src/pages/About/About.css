@@ -1,0 +1,27 @@
+.about {
+  color: white;
+  font-family: "Manuscribe Free", sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  text-align: center;
+}
+.about_canvas {
+  height: 200px;
+}
+.about_text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 1s ease forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.about_flag {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 2s ease forwards;
+}

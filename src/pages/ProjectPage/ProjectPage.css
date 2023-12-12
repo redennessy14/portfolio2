@@ -8,6 +8,9 @@
   font-weight: 800;
   width: 85%;
   text-align: right;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 0.5s ease forwards;
 }
 .project__block {
   display: flex;
@@ -18,14 +21,23 @@
 }
 .project__block_img {
   width: 40%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 1s ease forwards;
 }
 .project__block_name {
   font-family: "Manuscribe Free", sans-serif;
   font-weight: 600;
   font-size: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 1s ease forwards;
 }
 .project__block_desc {
   font-family: "Clash Display", sans-serif;
   font-weight: 300;
   font-size: 25px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 1s ease forwards;
 }

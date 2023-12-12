@@ -1,0 +1,6 @@
+.brain {
+  height: 500px;
+  width: 50%;
+  z-index: -1;
+  margin: 100px auto;
+}

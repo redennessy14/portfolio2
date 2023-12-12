@@ -20,4 +20,7 @@
   font-weight: 600;
   text-decoration: none;
   color: inherit;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 1s ease forwards;
 }

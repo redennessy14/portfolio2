@@ -16,16 +16,6 @@ const ProjectPage = () => {
           </p>
         </div>
       </div>
-      <div className="project__block">
-        <img src={IMG1} alt="" className="project__block_img" />
-        <div>
-          {" "}
-          <h3 className="project__block_name">Starbucks</h3>
-          <p className="project__block_desc">
-            JS , HTML , CSS , Firebase , Material UI
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
