@@ -1,23 +1,20 @@
-import React, { useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
-import { useAnimations, useGLTF } from "@react-three/drei";
+import { Text, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 const Model = () => {
   const { scene, animations } = useGLTF("/model/prog/scene.gltf");
-  console.log(animations);
-
-  let mixer = new THREE.AnimationMixer(scene);
-  animations.forEach((clip) => {
-    const action = mixer.clipAction(clip);
-    action.play();
-  });
-
-  useFrame((state, delta) => {
-    mixer.update(delta);
-  });
-
   const group = useRef();
+
+  let mixer;
+  if (scene && animations.length > 0) {
+    mixer = new THREE.AnimationMixer(scene);
+    animations.forEach((clip) => {
+      const action = mixer.clipAction(clip);
+      action.play();
+    });
+  }
 
   useFrame(({ mouse }) => {
     const sensitivity = 0.003;

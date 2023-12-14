@@ -1,3 +1,20 @@
 .homepage {
   position: relative;
 }
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  font-size: 80px;
+  font-family: "Clash Display", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
