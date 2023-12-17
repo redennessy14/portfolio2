@@ -1,14 +1,29 @@
 import React from "react";
 import "./NameBlock.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const NameBlock = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isHome = location.pathname === "/" || location.pathname === "/index";
+
+  const handleBack = () => {
+    navigate("/");
+  };
+
   return (
     <div>
-      <div className="nameblock" onClick={() => navigate("/home")}>
-        Islam Tursunaliev
+      <div className="nameblock" onClick={() => navigate("/")}>
+        Tursunaliev
       </div>
+      {isHome ? null : (
+        <div className="back_home" onClick={handleBack}>
+          <ArrowBackIcon />
+          Back to home
+        </div>
+      )}
     </div>
   );
 };

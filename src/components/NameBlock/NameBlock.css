@@ -10,3 +10,15 @@
   font-weight: 800;
   cursor: pointer;
 }
+
+.back_home {
+  color: white;
+  font-family: "Manuscribe Free", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 25px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}

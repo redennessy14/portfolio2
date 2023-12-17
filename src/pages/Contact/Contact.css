@@ -1,6 +1,24 @@
+.contact {
+  display: flex;
+}
 .brain {
   height: 500px;
   width: 50%;
   z-index: -1;
   margin: 100px auto;
+}
+.contact__block {
+  width: 50%;
+  color: white;
+  margin-top: 200px;
+  font-family: "Clash Display", sans-serif;
+  font-size: 30px;
+}
+.contact__block div {
+  margin-top: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
