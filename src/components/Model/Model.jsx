@@ -2,19 +2,32 @@ import React, { useState, useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Text, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const Model = () => {
-  const { scene, animations } = useGLTF("/model/prog/scene.gltf");
+  const [loadingPercentage, setLoadingPercentage] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const { scene } = useGLTF("/model/prog/scene.gltf");
+  console.log(loadingPercentage, "load");
   const group = useRef();
 
-  let mixer;
-  if (scene && animations.length > 0) {
-    mixer = new THREE.AnimationMixer(scene);
-    animations.forEach((clip) => {
-      const action = mixer.clipAction(clip);
-      action.play();
-    });
-  }
+  useEffect(() => {
+    const loader = new GLTFLoader();
+    loader.load(
+      "/model/prog/scene.gltf",
+      (gltf) => {
+        scene.add(gltf.scene);
+        setIsLoading(false); // Установка isLoading в false после завершения загрузки
+      },
+      (xhr) => {
+        const percentLoaded = Math.round((xhr.loaded / xhr.total) * 100);
+        setLoadingPercentage(percentLoaded);
+      },
+      (error) => {
+        console.error("An error happened", error);
+      }
+    );
+  }, [scene]);
 
   useFrame(({ mouse }) => {
     const sensitivity = 0.003;
@@ -33,16 +46,23 @@ const Model = () => {
   });
 
   return (
-    <group ref={group}>
-      {scene && (
-        <primitive
-          position={[0, 0, 0]}
-          object={scene}
-          scale={[1.5, 1.5, 1.5]}
-          rotation={[5, 0, 5]}
-        />
+    <>
+      {isLoading ? (
+        <Text style={{ position: "absolute", top: 10, left: 10 }}>
+          Loading: {loadingPercentage}%
+        </Text>
+      ) : null}
+      {!isLoading && scene && (
+        <group ref={group}>
+          <primitive
+            position={[0, 0, 0]}
+            object={scene}
+            scale={[1.5, 1.5, 1.5]}
+            rotation={[5, 0, 5]}
+          />
+        </group>
       )}
-    </group>
+    </>
   );
 };
 
