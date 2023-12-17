@@ -1,18 +1,26 @@
 .contact {
   display: flex;
+  align-items: center;
 }
 .brain {
   height: 500px;
   width: 50%;
   z-index: -1;
-  margin: 100px auto;
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 .contact__block {
   width: 50%;
   color: white;
-  margin-top: 200px;
   font-family: "Clash Display", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
+  margin-left: 50px;
+  position: fixed;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 .contact__block div {
   margin-top: 25px;
