@@ -24,9 +24,20 @@
 }
 .contact__block div {
   margin-top: 25px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 1s ease forwards;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.contact__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }

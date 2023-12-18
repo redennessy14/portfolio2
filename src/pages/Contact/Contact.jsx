@@ -24,7 +24,7 @@ const Contact = () => {
         </div>
         <div>
           <GitHub />{" "}
-          <a href="https://github.com/redennessy14">
+          <a href="https://github.com/redennessy14" target="_blank">
             https://github.com/redennessy14
           </a>
         </div>

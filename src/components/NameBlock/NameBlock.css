@@ -22,3 +22,69 @@
   left: 10px;
   z-index: 2;
 }
+
+.burger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #fdfdfd;
+  transition: all 0.3s ease;
+}
+
+.burger-menu.active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 3;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal.open {
+  right: 0;
+}
+
+.modal_link {
+  text-decoration: none;
+  color: white;
+  font-size: 100px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+}
+
+.modal_link:hover {
+  color: black;
+  background-color: white;
+}
