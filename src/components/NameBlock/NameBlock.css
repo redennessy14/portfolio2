@@ -88,3 +88,43 @@
   color: black;
   background-color: white;
 }
+
+@media (max-width: 900px) {
+  .modal_link {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nameblock {
+    font-size: 20px;
+  }
+  .modal_link {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 470px) {
+  .nameblock {
+    font-size: 16px;
+  }
+  .modal_link {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 370px) {
+  .nameblock {
+    font-size: 14px;
+  }
+
+  .modal_link {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nameblock {
+    font-size: 12px;
+  }
+}

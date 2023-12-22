@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./NameBlock.css";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -20,6 +20,11 @@ const NameBlock = () => {
   const handleBack = () => {
     navigate("/");
   };
+
+  useEffect(() => {
+    setIsModalOpen(false);
+    setIsActive(false);
+  }, [location.pathname]);
 
   return (
     <div>

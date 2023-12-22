@@ -9,3 +9,27 @@
   font-family: "Clash Display", sans-serif;
   font-weight: 300;
 }
+
+@media (max-width: 700px) {
+  .footer {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+  .footer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 370px) {
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    font-size: 12px;
+  }
+}
