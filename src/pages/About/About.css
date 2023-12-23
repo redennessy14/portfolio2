@@ -4,6 +4,7 @@
   font-weight: 400;
   font-size: 100px;
   text-align: center;
+  justify-content: center;
 }
 
 .about_flag {
@@ -14,6 +15,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: slide-up 1s ease forwards;
+  margin-top: 100px;
 }
 
 @keyframes slide-up {

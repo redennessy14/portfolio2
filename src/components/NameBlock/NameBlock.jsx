@@ -34,7 +34,6 @@ const NameBlock = () => {
       {isHome ? null : (
         <div className="back_home" onClick={handleBack}>
           <ArrowBackIcon />
-          Back to home
         </div>
       )}
       <div

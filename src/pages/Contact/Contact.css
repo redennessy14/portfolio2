@@ -47,7 +47,7 @@ a {
     flex-direction: column;
   }
   .brain {
-    margin-top: 150px;
+    margin-top: 100px;
     height: 300px;
     width: 100%;
   }
@@ -63,6 +63,9 @@ a {
   .contact__block {
     font-size: 14px;
   }
+  .brain {
+    height: 150px;
+  }
 }
 
 @media (max-width: 370px) {
@@ -72,4 +75,7 @@ a {
 }
 
 @media (max-width: 320px) {
+  .brain {
+    height: 120px;
+  }
 }
