@@ -2,7 +2,6 @@ import React from "react";
 import "./About.css";
 import FlagModel from "../../components/FlagModel/FlagModel";
 import { Canvas } from "@react-three/fiber";
-import BrainModel from "../../components/BrainModel/BrainModel";
 
 const About = () => {
   return (

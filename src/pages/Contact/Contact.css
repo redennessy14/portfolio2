@@ -1,15 +1,13 @@
-.contact {
+.profile {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 .brain {
   height: 500px;
   width: 50%;
-  z-index: -1;
-  position: fixed;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
 }
 .contact__block {
   width: 50%;
@@ -17,10 +15,6 @@
   font-family: "Clash Display", sans-serif;
   font-size: 25px;
   margin-left: 50px;
-  position: fixed;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
 }
 .contact__block div {
   margin-top: 25px;
@@ -40,4 +34,42 @@ a {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+}
+@media (max-width: 700px) {
+  .contact__block {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .brain {
+    margin-top: 150px;
+    height: 300px;
+    width: 100%;
+  }
+  .contact__block {
+    font-size: 18px;
+  }
+  .contact__block div {
+    display: block;
+  }
+}
+
+@media (max-width: 470px) {
+  .contact__block {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 370px) {
+  .contact__block {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
 }

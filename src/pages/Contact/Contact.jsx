@@ -6,7 +6,7 @@ import { MailOutline, Phone, GitHub } from "@mui/icons-material";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="profile">
       <div className="brain">
         <Canvas>
           <ambientLight intensity={1} color="white" />
@@ -25,7 +25,7 @@ const Contact = () => {
         <div>
           <GitHub />{" "}
           <a href="https://github.com/redennessy14" target="_blank">
-            https://github.com/redennessy14
+            redennessy14
           </a>
         </div>
       </div>
