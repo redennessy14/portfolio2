@@ -2,8 +2,22 @@ import React, { useState } from "react";
 import "./ProjectPage.css";
 import IMG1 from "../../images/starbucks.png";
 import VID1 from "../../video/portfolio.MOV";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ProjectPage = () => {
+  const images = [IMG1, IMG1, IMG1];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
   return (
     <div className="project">
       <h2>My Projects</h2>
@@ -18,7 +32,17 @@ const ProjectPage = () => {
         </div>
       </div>
       <div className="project__block">
-        <img src={IMG1} alt="" className="project__block_img" />
+        <div className="carousel-container">
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div key={index}>
+                <div className="carousel-image">
+                  <img src={image} alt={`Image ${index + 1}`} />
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
         <div>
           {" "}
           <h3 className="project__block_name">Starbucks</h3>
